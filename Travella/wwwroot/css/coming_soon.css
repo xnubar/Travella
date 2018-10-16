@@ -1,0 +1,115 @@
+﻿body, html {
+    height: 100%;
+}
+
+.bg {
+    overflow: hidden;
+    background-image: url(../images/ispaniya.jpg);
+    margin-top: -50px;
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.05s step-end;
+    padding:0;
+}
+
+footer {
+    background-color: black;
+    bottom: 0px;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+   
+}
+
+.socials {
+    margin-right: 5px;
+    color: #FCB21B !important;
+}
+.row p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #FCB21B;
+}
+
+a{
+    text-decoration:none;
+}
+.contact a {
+    color: #FCB21B;
+    margin-top: -50px;
+}
+.travella{
+    margin-top:5px;
+}
+
+#text-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display:block;
+}
+#text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Times New Roman';
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.z-depth-1 {
+    height: 60px;   
+}
+
+
+
+
+* ===== NAVIGATION ======*/
+.navbar {
+    border: 0;
+    z-index: 9999;
+    letter-spacing: 4px;
+}
+
+.navbar-default {
+    background: rgba(210,105,30, 0);
+    border:0px;
+}
+
+
+
+.logo {
+    display: block;
+    height: auto;
+    width: 52px;
+    padding-top: 20px;
+    margin-right: -16px;
+}
+
+.navbar-brand > img {
+    height: 100%;
+    padding: 15px; /* firefox bug fix */
+    width: auto;
+}
+
+
+
+.navbar-header h1 {
+    letter-spacing: 1px;
+    color: #FCB21B !important;
+    font-family: 'Times New Roman', cursive;
+}
+
+
+.navbar-toggle {
+    background-color: transparent !important;
+    border: 0;
+}
+
+

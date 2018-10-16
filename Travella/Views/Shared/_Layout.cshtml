@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="~/images/Favicon.png" asp-append-version="true" />
+    <title>@ViewData["Title"]Travella</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" /><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+        @RenderSection("styles", false)
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+    <div class="bg col-lg-12 col-md-12 col-sm-12">
+        <!-- Image and text -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-left logo">
+                        <img  src="~/images/Favicon.png" alt="Alternate Text" />
+                    </div>
+                    <h1 class="brand brand-name navbar-left">TRAVELLA</h1>
+                </div>
+
+            </div>
+        </nav>
+
+        @RenderBody()
+
+        <!-- Footer -->
+        <footer class="navbar navbar-fixed-bottom">
+
+
+            <!-- Footer Elements -->
+            <div class="container">
+
+                <!-- Grid row-->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <!-- FOLLOW US -->
+                    <div class="social-media col-4 col-md-4 col-sm-4 col-xs-4 py-5">
+                        <p>
+                            FOLLOW US
+                        </p>
+                        <div class="mb-5 flex-center">
+                            <!-- Facebook -->
+                            <a class="fb-ic mr-3" target="_blank" href="https://www.facebook.com/travellabaku/" title="Travella"><i class="fa fa-lg fa-facebook socials"> </i></a>
+
+                            <!-- Twitter -->
+                            <a class="tw-ic mr-3" target="_blank" href="https://twitter.com/AzTravella" title="travella.az"><i class="fa fa-lg fa-twitter socials"> </i></a>
+
+                            <!-- Google +-->
+                            <a class="gplus-ic mr-3"><i class="fa fa-lg fa-google-plus socials"> </i></a>
+
+                            <!--Instagram-->
+                            <a class="ins-ic mr-3" target="_blank" href="https://www.instagram.com/travella.az/" title="travella.az"><i class="fa fa-lg fa-instagram socials"> </i></a>
+
+                        </div>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="contact col-4 col-md-4 col-sm-4 col-xs-4 py-5">
+                        <p>
+                            CONTACT
+                        </p>
+
+                        <!-- Phone -->
+                        <div class="mb-5 flex-center">
+                            <a><i class="fa fa-phone mr-3"></i> +99455 7244433</a>
+
+                        </div>
+
+                        <!-- Whatsapp -->
+                        <div class="mb-5 flex-center">
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=447546325849">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i> +44 7546 325849
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <div class="contact col-4 col-md-4 col-sm-4 col-xs-4 py-5">
+                        <p>
+                            ADDRESS
+                        </p>
+                        <div class="mb-5 flex-center">
+                            <!-- in map -->
+                            <div id="map-container" class="z-depth-1"></div>
+
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+
+
+                <!-- Grid row-->
+
+            </div>
+            <!-- Footer Elements -->
+            <!-- Copyright -->
+
+            <p class="travella footer-copyright text-center py-3 copyright">
+                © 2018 TRAVELLA
+            </p>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </div>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="~/js/coming_soon.js" asp-append-version="true"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyCWtxaIPGf2ogZa3F2YPsTUeYfCSvrTmyw"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
